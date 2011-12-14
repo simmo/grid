@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>The Grid</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+      /* For display only */
+      
+      body {
+        font-family: 'Helvetica Neue' Arial sans-serif;
+      }
+      
+      .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 980px;
+      }
+      
+      h1, h2 {
+        margin-bottom: 10px;
+      }
+      
+      p {
+        margin-top: 0;
+      }
+      
+      .grid {
+        background: #eee;
+        padding-top: 2%;
+        margin-bottom: 50px;
+      }
+      
+      .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {
+        background: #df3633;
+        background-image: -webkit-linear-gradient(rgba(255,255,255,.2), transparent);
+        background-image: -moz-linear-gradient(rgba(255,255,255,.2), transparent);
+        background-image: -ms-linear-gradient(rgba(255,255,255,.2), transparent);
+        background-image: -o-linear-gradient(rgba(255,255,255,.2), transparent);
+        background-image: linear-gradient(rgba(255,255,255,.2), transparent);
+        color: #fff;
+        text-shadow: rgba(0,0,0,.3) 0 -1px 0;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 2%;
+      }
+      
+      /* For display only */
+    </style>
+	</head>
+  <body>
+    
+    <div class="container">
+      <h1>The Grid</h1>
+      <p>Resize the window to see the grid respond.
+      <div class="grid" id="all">
+        <div class="twelve">12</div>
+        <div class="one">1</div>
+        <div class="eleven">11</div>
+        <div class="two">2</div>
+        <div class="ten">10</div>
+        <div class="three">3</div>
+        <div class="nine">9</div>
+        <div class="four">4</div>
+        <div class="eight">8</div>
+        <div class="five">5</div>
+        <div class="seven">7</div>
+        <div class="six">6</div>
+        <div class="six">6</div>
+      </div>
+      
+      <h2>Per row</h2>
+      <p>Forces the grid on to a new row. Ensuring columns are cleared.</p>
+      <div class="grid two_per_row">
+        <div class="three"><p>3</p><p>I am bigger than all the rest.</p></div>
+        <div class="nine">9</div>
+        <div class="nine">9</div>
+        <div class="three">3</div>
+        <div class="three">3</div>
+        <div class="nine">9</div>
+      </div>
+      
+      <h2>Prefix</h2>
+      <p>Pushes columns.</p>
+      <div class="grid">
+        <div class="one prefix_eleven">1</div>
+        <div class="two prefix_ten">2</div>
+        <div class="three prefix_nine">3</div>
+        <div class="four prefix_eight">4</div>
+        <div class="five prefix_seven">5</div>
+        <div class="six prefix_six">6</div>
+        <div class="seven prefix_five">7</div>
+        <div class="eight prefix_four">8</div>
+        <div class="nine prefix_three">9</div>
+        <div class="ten prefix_two">10</div>
+        <div class="eleven prefix_one">11</div>
+      </div>
+      
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1,7,1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery-1.7.1.min.js"><\/script>')</script>
+    <script>
+      $(function() {
+        var $cols = $('#all').children().bind('pixels', function() { var $this = $(this); $this.text($this.width() + 'px'); }).trigger('pixels');
+        $(window).resize(function() { $cols.trigger('pixels'); })
+      });
+    </script>
+  </body>
+</html>
