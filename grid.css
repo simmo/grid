@@ -116,3 +116,38 @@
 .grid .prefix_eleven {
   margin-left: 93.667%;
 }
+
+/* Suffix */
+.grid .suffix_one {
+  margin-right: 10.333%;
+}
+.grid .suffix_two {
+  margin-right: 18.667%;
+}
+.grid .suffix_three {
+  margin-right: 27%;
+}
+.grid .suffix_four {
+  margin-right: 35.333%;
+}
+.grid .suffix_five {
+  margin-right: 43.667%;
+}
+.grid .suffix_six {
+  margin-right: 52%;
+}
+.grid .suffix_seven {
+  margin-right: 60.333%;
+}
+.grid .suffix_eight {
+  margin-right: 68.667%;
+}
+.grid .suffix_nine {
+  margin-right: 77%;
+}
+.grid .suffix_ten {
+  margin-right: 85.333%;
+}
+.grid .suffix_eleven {
+  margin-right: 93.667%;
+}
