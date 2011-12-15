@@ -1,0 +1,39 @@
+body {
+  font-family: 'Helvetica Neue' Arial sans-serif;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+      
+p {
+  margin-top: 0;
+}
+      
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 980px;
+}
+      
+.grid {
+  background: #eee;
+  padding-top: 2%;
+  margin-bottom: 50px;
+}
+      
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {
+  background: #df3633;
+  background-image: -webkit-linear-gradient(rgba(255,255,255,.2), transparent);
+  background-image: -moz-linear-gradient(rgba(255,255,255,.2), transparent);
+  background-image: -ms-linear-gradient(rgba(255,255,255,.2), transparent);
+  background-image: -o-linear-gradient(rgba(255,255,255,.2), transparent);
+  background-image: linear-gradient(rgba(255,255,255,.2), transparent);
+  color: #fff;
+  text-shadow: rgba(0,0,0,.3) 0 -1px 0;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 2%;
+}
