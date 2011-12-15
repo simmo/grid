@@ -1,12 +1,18 @@
 body {
   font-family: 'Helvetica Neue' Arial sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2 {
+  margin-left: 2%;
+  margin-right: 2%;
   margin-bottom: 10px;
 }
       
 p {
+  margin-left: 2%;
+  margin-right: 2%;
   margin-top: 0;
 }
       
