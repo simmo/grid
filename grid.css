@@ -151,3 +151,28 @@
 .grid .suffix_eleven {
   margin-right: 93.667%;
 }
+
+@media screen and (max-width:1024px) {
+  body {
+    font-size: 1em; /* 16/16 = 1 */
+  }
+}
+
+@media screen and (max-width:768px) {
+  body {
+    font-size: 0.9375em; /* 15/16 = 0.9375 */
+  }
+}
+
+/* Less than 480px */
+@media screen and (max-width:480px) {
+  body {
+    font-size: 0.875em; /* 14/16 = 0.875 */
+  }
+	.grid .one, .grid .two, .grid .three, .grid .four, .grid .five, .grid .six, .grid .seven, .grid .eight, .grid .nine, .grid .ten, .grid .eleven, .grid .twelve {
+    width: 98%;
+    margin-left: 2%;
+    margin-right: 2%;
+    clear: none;
+  }
+}
