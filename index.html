@@ -3,81 +3,65 @@
 	<head>
 		<meta charset="utf-8">
 		<title>The Grid</title>
-    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="grid.min.css">
     <link rel="stylesheet" href="demo.css">
 	</head>
   <body>
     
     <div class="container">
       <h1>The Grid</h1>
-      <p>Resize the window to see the grid respond.
-      <div class="grid" id="all">
-        <div class="twelve">12</div>
-        <div class="one">1</div>
-        <div class="eleven">11</div>
-        <div class="two">2</div>
-        <div class="ten">10</div>
-        <div class="three">3</div>
-        <div class="nine">9</div>
-        <div class="four">4</div>
-        <div class="eight">8</div>
-        <div class="five">5</div>
-        <div class="seven">7</div>
-        <div class="six">6</div>
-        <div class="six">6</div>
+      <p>Resize the window to see the rows respond.</p>
+      <div class="row">
+        <div class="col12">12</div>
+      </div>
+      <div class="row">
+        <div class="col1">1</div>
+        <div class="col11">11</div>
+      </div>
+      <div class="row">
+        <div class="col2">2</div>
+        <div class="col10">10</div>
+      </div>
+      <div class="row">
+        <div class="col3">3</div>
+        <div class="col9">9</div>
+      </div>
+      <div class="row">
+        <div class="col4">4</div>
+        <div class="col8">8</div>
+      </div>
+      <div class="row">
+        <div class="col5">5</div>
+        <div class="col7">7</div>
+      </div>
+      <div class="row">
+        <div class="col6">6</div>
+        <div class="col6">6</div>
       </div>
       
-      <h2>Per row</h2>
-      <p>Forces the grid on to a new row. Ensuring columns are cleared.</p>
-      <div class="grid two_per_row">
-        <div class="three"><p>3</p><p>I am bigger than all the rest.</p></div>
-        <div class="nine">9</div>
-        <div class="nine">9</div>
-        <div class="three">3</div>
-        <div class="three">3</div>
-        <div class="nine">9</div>
+      <h2>Offset</h2>
+      <p>Offset space before a column.</p>
+      <div class="row">
+        <div class="col4">4</div>
+        <div class="col4 offset4">4 - Offset 4</div>
       </div>
-      
-      <h2>Prefix</h2>
-      <p>Pad space before a column.</p>
-      <div class="grid">
-        <div class="one prefix_eleven">1</div>
-        <div class="two prefix_ten">2</div>
-        <div class="three prefix_nine">3</div>
-        <div class="four prefix_eight">4</div>
-        <div class="five prefix_seven">5</div>
-        <div class="six prefix_six">6</div>
-        <div class="seven prefix_five">7</div>
-        <div class="eight prefix_four">8</div>
-        <div class="nine prefix_three">9</div>
-        <div class="ten prefix_two">10</div>
-        <div class="eleven prefix_one">11</div>
+      <div class="row">
+        <div class="col5 offset7">5 - Offset 7</div>
       </div>
-      
-      <h2>Suffix</h2>
-      <p>Pad space after a column.</p>
-      <div class="grid">
-      	<div class="one suffix_eleven">1</div>
-      	<div class="two suffix_ten">2</div>
-      	<div class="three suffix_nine">3</div>
-      	<div class="four suffix_eight">4</div>
-      	<div class="five suffix_seven">5</div>
-      	<div class="six suffix_six">6</div>
-      	<div class="seven suffix_five">7</div>
-      	<div class="eight suffix_four">8</div>
-      	<div class="nine suffix_three">9</div>
-      	<div class="ten suffix_two">10</div>
-      	<div class="eleven suffix_one">11</div>
+      <div class="row">
+        <div class="col6">6</div>
+        <div class="col4 offset2">4 - Offset 2</div>
+      </div>
+      <div class="row">
+        <div class="col11 offset1">11 - Offset 1</div>
       </div>
     </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1,7,1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="jquery-1.7.1.min.js"><\/script>')</script>
-    <script>
-      $(function() {
-        var $cols = $('#all').children().bind('pixels', function() { var $this = $(this); $this.text($this.width() + 'px'); }).trigger('pixels');
-        $(window).resize(function() { $cols.trigger('pixels'); })
-      });
+    <script defer>
+      var $cols = $('.row').children().bind('pixels', function() { var $this = $(this); $this.attr('data-actual', $this.innerWidth() + 'px'); }).trigger('pixels');
+      $(window).resize(function() { $cols.trigger('pixels'); });
     </script>
   </body>
 </html>
