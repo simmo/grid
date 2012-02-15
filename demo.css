@@ -4,6 +4,39 @@ body {
   padding: 0;
 }
 
+.container:after {
+  font-size: .825em;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2.6em;
+  padding-left: 10px;
+  padding-right: 30px;
+  position: fixed;
+  bottom: -1.3em;
+  right: -5px;
+  background: rgba(186,218,85,.9);
+  color: #fff;
+  text-shadow: rgba(0,0,0,.2) 0 -1px 0;
+  border-radius: 3px;
+  box-shadow: rgba(0,0,0,.2) -1px 1px 5px, rgba(255,255,255,.5) 0 0 2px inset;
+  background-image: -webkit-linear-gradient(transparent, rgba(0,0,0,.1));
+  -webkit-transform-origin: right center;
+  -webkit-transform: rotate(45deg);
+  display: none;
+}
+
+.no-rotate .container:after, .rotate .container:after {
+  display: block;
+}
+
+.no-rotate .container:after {
+  content: 'Resize!';
+}
+
+.rotate .container:after {
+  content: 'Rotate!';
+}
+
 h1, h2 {
   margin-bottom: .1em;
 }
