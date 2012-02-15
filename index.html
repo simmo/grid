@@ -39,6 +39,26 @@
         <div class="col6">6</div>
       </div>
       
+      <h2>Nested</h2>
+      <p>The grid can also be nested inside itself.</p>
+      <div class="row">
+        <div class="col6">
+          <div class="row">
+            <div class="col4">4</div>
+            <div class="col8">8</div>
+          </div>
+          <div class="row">
+            <div class="col8">8</div>
+            <div class="col4">4</div>
+          </div>
+          <div class="row">
+            <div class="col4">4</div>
+            <div class="col8">8</div>
+          </div>
+        </div>
+        <div class="col6">6</div>
+      </div>
+      
       <h2>Offset</h2>
       <p>Offset space before a column.</p>
       <div class="row">
@@ -55,6 +75,24 @@
       <div class="row">
         <div class="col11 offset1">11 - Offset 1</div>
       </div>
+      
+      <h2>Micro Grid</h2>
+      <p>By default the grid automatically stacks when the available width drops below 768px. However there is also the option to specify additional classes based on a micro, four column grid.</p>
+      <div class="row">
+        <div class="col3 micro2">3 - Micro 2</div>
+        <div class="col9 micro2">9 - Micro 2</div>
+      </div>
+      <div class="row">
+        <div class="col2 micro1">2 - Micro 1</div>
+        <div class="col10 micro3">10 - Micro 3</div>
+      </div>
+      <div class="row">
+        <div class="col3 micro1">5 - Micro 1</div>
+        <div class="col3 micro1">7 - Micro 1</div>
+        <div class="col3 micro1">5 - Micro 1</div>
+        <div class="col3 micro1">7 - Micro 1</div>
+      </div>
+      
     </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1,7,1/jquery.min.js"></script>

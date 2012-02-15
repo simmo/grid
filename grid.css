@@ -1,9 +1,13 @@
 /* The Grid - Mike Simmonds - https://github.com/MikeSimmonds/Grid */
+
+/* Set container default width */
 .container {
   margin-left: auto;
   margin-right: auto;
+  width: 960px;
 }
 
+/* Clearfix all rows */
 .row:before, .row:after {
   content: '\0020';
   display: block;
@@ -16,278 +20,151 @@
   clear: both;
 }
 .row {
-  margin-left: -10px;
-  margin-right: -10px;
   zoom: 1;
+  margin-left: -2%; /* Offsets the first column's left margin */
 }
 
+/* Column structure */
 .row [class*=col] {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
+  margin-left: 2%;
   display: block;
   float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+/* Column widths */
 .row .col1 {
-  width: 60px;
+  width: 6.333%;
 }
 .row .col2 {
-  width: 140px;
+  width: 14.667%;
 }
 .row .col3 {
-  width: 220px;
+  width: 23%;
 }
 .row .col4 {
-  width: 300px;
+  width: 31.333%;
 }
 .row .col5 {
-  width: 380px;
+  width: 39.667%;
 }
 .row .col6 {
-  width: 460px;
+  width: 48%;
 }
 .row .col7 {
-  width: 540px;
+  width: 56.333%;
 }
 .row .col8 {
-  width: 620px;
+  width: 64.667%;
 }
 .row .col9 {
-  width: 700px;
+  width: 73%;
 }
 .row .col10 {
-  width: 780px;
+  width: 81.333%;
 }
 .row .col11 {
-  width: 860px;
+  width: 89.667%;
 }
-.row .col12, .container {
-  width: 940px;
+.row .col12 {
+  width: 98%;
 }
 
+/* Offset columns */
 .row .offset1 {
-  margin-left: 90px;
+  margin-left: 10.333%;
 }
 .row .offset2 {
-  margin-left: 170px;
+  margin-left: 18.667%;
 }
 .row .offset3 {
-  margin-left: 250px;
+  margin-left: 27%;
 }
 .row .offset4 {
-  margin-left: 330px;
+  margin-left: 35.333%;
 }
 .row .offset5 {
-  margin-left: 410px;
+  margin-left: 43.667%;
 }
 .row .offset6 {
-  margin-left: 490px;
+  margin-left: 52%;
 }
 .row .offset7 {
-  margin-left: 570px;
+  margin-left: 60.333%;
 }
 .row .offset8 {
-  margin-left: 650px;
+  margin-left: 68.667%;
 }
 .row .offset9 {
-  margin-left: 730px;
+  margin-left: 77%;
 }
 .row .offset10 {
-  margin-left: 810px;
+  margin-left: 85.333%;
 }
 .row .offset11 {
-  margin-left: 890px;
+  margin-left: 93.667%;
 }
 
-@media (min-width:1230px) {
+/* Large displays */
+@media (min-width:1200px) {
+  /* Scale font base */
   body {
-    font-size: 1.125em; /* 18/16 = 1.125 */
+    font-size: 1.125em;
   }
   
-  .row {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  
-  .row [class*=col] {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 30px;
-  }
-  .row .col1 {
-    width: 70px;
-  }
-  .row .col2 {
-    width: 170px;
-  }
-  .row .col3 {
-    width: 270px;
-  }
-  .row .col4 {
-    width: 370px;
-  }
-  .row .col5 {
-    width: 470px;
-  }
-  .row .col6 {
-    width: 570px;
-  }
-  .row .col7 {
-    width: 670px;
-  }
-  .row .col8 {
-    width: 770px;
-  }
-  .row .col9 {
-    width: 870px;
-  }
-  .row .col10 {
-    width: 970px;
-  }
-  .row .col11 {
-    width: 1070px;
-  }
-  .row .col12, .container {
-    width: 1170px;
-  }
-  
-  .row .offset1 {
-    margin-left: 115px;
-  }
-  .row .offset2 {
-    margin-left: 215px;
-  }
-  .row .offset3 {
-    margin-left: 315px;
-  }
-  .row .offset4 {
-    margin-left: 415px;
-  }
-  .row .offset5 {
-    margin-left: 515px;
-  }
-  .row .offset6 {
-    margin-left: 615px;
-  }
-  .row .offset7 {
-    margin-left: 715px;
-  }
-  .row .offset8 {
-    margin-left: 815px;
-  }
-  .row .offset9 {
-    margin-left: 915px;
-  }
-  .row .offset10 {
-    margin-left: 1015px;
-  }
-  .row .offset11 {
-    margin-left: 1115px;
+  /* Fix container width */
+  .container {
+    width: 1160px;
   }
 }
 
+/* Landscape tablets */
 @media (min-width:768px) and (max-width:980px) {
-  .row .col1 {
-    width: 42px;
-  }
-  .row .col2 {
-    width: 104px;
-  }
-  .row .col3 {
-    width: 166px;
-  }
-  .row .col4 {
-    width: 228px;
-  }
-  .row .col5 {
-    width: 290px;
-  }
-  .row .col6 {
-    width: 352px;
-  }
-  .row .col7 {
-    width: 414px;
-  }
-  .row .col8 {
-    width: 476px;
-  }
-  .row .col9 {
-    width: 538px;
-  }
-  .row .col10 {
-    width: 600px;
-  }
-  .row .col11 {
-    width: 662px;
-  }
-  .row .col12, .container {
-    width: 724px;
-  }
-  
-  .row .offset1 {
-    margin-left: 74px;
-  }
-  .row .offset2 {
-    margin-left: 138px;
-  }
-  .row .offset3 {
-    margin-left: 202px;
-  }
-  .row .offset4 {
-    margin-left: 266px;
-  }
-  .row .offset5 {
-    margin-left: 330px;
-  }
-  .row .offset6 {
-    margin-left: 394px;
-  }
-  .row .offset7 {
-    margin-left: 458px;
-  }
-  .row .offset8 {
-    margin-left: 522px;
-  }
-  .row .offset9 {
-    margin-left: 586px;
-  }
-  .row .offset10 {
-    margin-left: 650px;
-  }
-  .row .offset11 {
-    margin-left: 714px;
+  /* Fix container width */
+  .container {
+    width: 728px;
   }
 }
 
+/* Portrait tablets */
 @media (max-width:768px) {
+  /* Scale font base */
   body {
-    font-size: 1.125em; /* 18/16 = 1.125 */
+    font-size: 1.125em;
   }
   
+  /* Make container fluid with fixed gutter */
   .container {
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
   }
   
-  .row {
-    margin-left: 0;
-    margin-right: 0;
+  /* Removes any offset */
+  .row [class*=col] {
+    margin-left: 2%;
   }
   
-  .row [class*=col] {
-    width: auto;
-    float: none;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 20px;
+  /* Set width for columns and micro grid */
+  .row [class*=col], .row .micro4 {
+    width: 98%;
+  }
+  .row .micro1 {
+    width: 23%;
+  }
+  .row .micro2 {
+    width: 48%;
+  }
+  .row .micro3 {
+    width: 73%;
   }
 }
 
+/* Smartphones */
 @media (max-width:480px) {
+  /* Scale font base */
   body {
     font-size: 1em; /* 16/16 = 1 */
   }
