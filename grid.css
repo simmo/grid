@@ -1,5 +1,10 @@
 /* The Grid - Mike Simmonds - https://github.com/MikeSimmonds/Grid */
 
+body {
+  font-size: 100%;
+  -webkit-text-size-adjust: none;
+}
+
 /* Set container default width */
 .container {
   margin-left: auto;
