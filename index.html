@@ -1,91 +1,156 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
-
-  <title>MikeSimmonds/Grid @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #bada55;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #4525aa; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #4525aa; }
-    h3 { text-align: center; color: #4525aa; }
-    a { color: #4525aa; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
-
-<body>
-  <a href="https://github.com/MikeSimmonds/Grid"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/MikeSimmonds/Grid/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/MikeSimmonds/Grid/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/MikeSimmonds/Grid">Grid</a>
-      <span class="small">by <a href="https://github.com/MikeSimmonds">MikeSimmonds</a></span></h1>
-
-    <div class="description">
-      Responsive CSS grid allowing rapid prototyping or production. Inspired by Twitter's bootstrap, Zurb's foundation and the 960 grid.
-    </div>
-
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1">
+		<title>Grid by Mike Simmonds @ GitHub</title>
+    <link rel="stylesheet" href="grid.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <link rel="stylesheet" href="demo.css">
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9639535-3']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+	</head>
+  <body>
+    <section class="container">
+      <header>
+        <h1>Grid <small>by Mike Simmonds</small></h1>
+        <p>Simple, responsive 12 column and micro 4 column CSS grid allowing for rapid prototyping or production. Inspired by Twitter's bootstrap, Zurb's foundation and the 960 grid. <a href="https://github.com/MikeSimmonds/Grid">View on GitHub</a> or <a href="https://github.com/MikeSimmonds/Grid/zipball/master">download</a>.</p>
+        <p>You can also clone the project with <a href="http://git-scm.com">Git</a> by running:</p>
+        <p><code>$ git clone git://github.com/MikeSimmonds/Grid</code></p>
+      </header>
+      
+      <article>
+        <header>
+          <h1>The Grid</h1>
+          <p>Resize the window (or rotate your device) to see the rows respond.</p>
+        </header>
+        <div class="row display">
+          <div class="col12">12</div>
+        </div>
+        <div class="row display">
+          <div class="col1">1</div>
+          <div class="col11">11</div>
+        </div>
+        <div class="row display">
+          <div class="col2">2</div>
+          <div class="col10">10</div>
+        </div>
+        <div class="row display">
+          <div class="col3">3</div>
+          <div class="col9">9</div>
+        </div>
+        <div class="row display">
+          <div class="col4">4</div>
+          <div class="col8">8</div>
+        </div>
+        <div class="row display">
+          <div class="col5">5</div>
+          <div class="col7">7</div>
+        </div>
+        <div class="row display">
+          <div class="col6">6</div>
+          <div class="col6">6</div>
+        </div>
+      </article>
+      
+      <article>
+        <header>
+          <h1>Nested</h1>
+          <p>The grid can also be nested inside itself.</p>
+        </header>
+        <div class="row">
+          <div class="col6">
+            <div class="row display">
+              <div class="col4">4</div>
+              <div class="col8">8</div>
+            </div>
+            <div class="row display">
+              <div class="col8">8</div>
+              <div class="col4">4</div>
+            </div>
+            <div class="row display">
+              <div class="col4">4</div>
+              <div class="col8">8</div>
+            </div>
+          </div>
+          <div class="col6">
+            <div class="row display">
+              <div class="col8">8</div>
+              <div class="col4">4</div>
+            </div>
+            <div class="row display">
+              <div class="col4">4</div>
+              <div class="col8">8</div>
+            </div>
+            <div class="row display">
+              <div class="col8">8</div>
+              <div class="col4">4</div>
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <header>
+          <h1>Offset</h1>
+          <p>Offset space before a column.</p>
+        </header>
+        <div class="row display">
+          <div class="col4">4</div>
+          <div class="col4 offset4">4 - Offset 4</div>
+        </div>
+        <div class="row display">
+          <div class="col5 offset7">5 - Offset 7</div>
+        </div>
+        <div class="row display">
+          <div class="col6">6</div>
+          <div class="col4 offset2">4 - Offset 2</div>
+        </div>
+        <div class="row display">
+          <div class="col11 offset1">11 - Offset 1</div>
+        </div>
+      </article>
+      
+      <article>
+        <header>
+          <h1>Micro Grid</h1>
+          <p>By default the grid automatically stacks when the available width drops below 768px. However there is also the option to specify additional classes based on a micro, four column grid.</p>
+        </header>
+        <div class="row display">
+          <div class="col3 micro2">3 - Micro 2</div>
+          <div class="col9 micro2">9 - Micro 2</div>
+        </div>
+        <div class="row display">
+          <div class="col2 micro1">2 - Micro 1</div>
+          <div class="col10 micro3">10 - Micro 3</div>
+        </div>
+        <div class="row display">
+          <div class="col3 micro1">5 - Micro 1</div>
+          <div class="col3 micro1">7 - Micro 1</div>
+          <div class="col3 micro1">5 - Micro 1</div>
+          <div class="col3 micro1">7 - Micro 1</div>
+        </div>
+      </article>
+    </section>
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/MikeSimmonds/Grid/zipball/master">zip</a> or
-      <a href="https://github.com/MikeSimmonds/Grid/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/MikeSimmonds/Grid</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/MikeSimmonds/Grid">MikeSimmonds/Grid</a>
-    </div>
-
-  </div>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-9639535-3");
-pageTracker._trackPageview();
-} catch(err) {}</script>"
-</body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery-1.7.1.min.js"><\/script>')</script>
+    <script defer>
+      if (window.orientation) $('html').addClass('rotatable');
+      var $cols = $('.row').children().bind('pixels', function() {
+        var $this = $(this);
+        $this.attr('data-actual', $this.innerWidth() + 'px');
+      }).trigger('pixels');
+      $(window).resize(function() { $cols.trigger('pixels'); });
+    </script>
+  </body>
 </html>
+
