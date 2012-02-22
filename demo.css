@@ -1,5 +1,5 @@
 html, body {
-  background: #f1f1f1;
+  background: #fcfcfc;
 }
 
 body {
@@ -56,14 +56,17 @@ section > header {
 }
 section > header h1 {
   font-size: 3em;
+  line-height: 1;
   margin-bottom: .1em;
+  display: inline-block;
 }
-section > header h1 small {
+section > header h2 {
   color: #aaa;
-  font-size: .5em;
+  line-height: 1;
   font-weight: normal;
+  display: inline-block;
 }
-section > header h1 + p {
+section > header h2 + p {
   font-size: 1.3em;
   font-weight: 300;
   color: #222;
