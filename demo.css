@@ -66,7 +66,7 @@ section > header h2 {
   font-weight: normal;
   display: inline-block;
 }
-section > header h2 + p {
+section > header hgroup + p {
   font-size: 1.3em;
   font-weight: 300;
   color: #222;
