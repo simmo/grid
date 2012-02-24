@@ -15,18 +15,14 @@ body {
 
 /* Clearfix all rows */
 .row:before, .row:after {
-  content: '\0020';
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+  content: '';
+  display: table;
 }
 .row:after {
   clear: both;
 }
 .row {
-  zoom: 1;
+  *zoom: 1;
   margin-left: -2%; /* Offsets the first column's left margin */
 }
 
